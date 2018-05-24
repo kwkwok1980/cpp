@@ -31,12 +31,12 @@ int main()
 	sem_t* sem = sem_open(SEM_NAME, O_CREAT|O_RDWR, 0666);
 	sem_wait(sem);
 	
-	Account * a1 = new(reinterprte_cast<void*>(base + offset) Account;
+	Account * a1 = new(reinterprte_cast<void*>(base + offset)) Account;
 	a1.name = "ABC";
 	a1.age = 10;
 	offset += sizeof(Account);
 	
-	Account * a2 = new(reinterprte_cast<void*>(base + offset) Account;
+	Account * a2 = new(reinterprte_cast<void*>(base + offset)) Account;
 	a2.name = "EFG";
 	a2.age = 20;
 	offset += sizeof(Account);
